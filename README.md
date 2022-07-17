@@ -1,64 +1,94 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Sobre o Projeto
 
-## About Laravel
+O projeto consiste em fazer um CRUD utilizando Laravel, e tem como foco a aprendizagem dessa tecnologia em geral.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Startando Projeto
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 1 - Clonar o projeto;
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Utilize o comando Git Clone dentro da pasta onde você quer clonar o repositório;
 
-## Learning Laravel
+### 2 - No meu caso, utilizei o XAMPP para subir o serviço MySql:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2.1 - Vá no site "https://www.apachefriends.org/pt_br/index.html";
+2.2 - Escolha o sistema operacional que você usa;
+2.3 - Instale o XAMPP;
+2.4 - Suba o serviço MySQL;
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 3 - Criar um banco de dados(Eu usei mysql):
 
-## Laravel Sponsors
+3.1 - No meu caso usei o Workbench para criar;
+3.2 - Abra o Workbench e vá em MySQL Connections e clique no ícone "+";
+3.3 - Digite "crud" no campo Connection Name;
+3.4 - Deixe por padrão o campo Username como root;
+3.5 - Entre na conexão;
+3.6 - Rode o comando "create database crud";
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### 4 - Rodar o Artisan Serve:
 
-### Premium Partners
+4.1 - Abra o terminal dentro da pasta do projeto;
+4.2 - Rode o comando php artisan serve;
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Usar o crud
 
-## Contributing
+### 5 - Inserir dados na tabela:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5.1 - Digitar o seguinte link no seu navegador "http://localhost:8000/lanches/novo";
+5.2 - Insira os dados;
+5.3 - Se tudo estiver correto irá aparecer a mensagem: "Lanche criado com sucesso!";
 
-## Code of Conduct
+### 6.1 - Verificar se os dados estão sendo inseridos na table pelo workbench:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6.1.1 - Entre na conexão que você fez no workbench;
+6.1.2 - Rode o comando "use crud";
+6.1.3 - Rode o comando "select from \* lanches";
 
-## Security Vulnerabilities
+### 6.2 - Verificar se os dados estão sendo inseridos na table pela web:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6.2.1 - Entrar na rota "http://localhost:8000/lanches/ver";
 
-## License
+### 7.1 - Verificar tabela com dados no workbench:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+7.1.1 - Entre na conexão que você fez no workbench;
+7.1.2 - Rode o comando "use crud";
+7.1.3 - Rode o comando "select from \* lanches";
+
+### 7.2 - Verificar tabela com dados na web:
+
+7.1.1- Entrar na rota "http://localhost:8000/lanches/ver";
+
+### 8 - Editar dados da tabela:
+
+8.1 - Entrar na rota "http://localhost:8000/lanches/ver";
+8.2 - Escolher o item que você quer editar;
+8.3 - Clicar no botão Editar, você redirecionado para página de edição;
+8.4 - Escolha o campo que você deseja alterar;
+8.5 - Clique em salvar, se tudo estiver certo vai aparecer a mensagem: "Lanche atualizado com sucesso!";
+
+### 9.1 - Verificar se os dados estão sendo atualizados na table pelo workbench:
+
+9.1.1 - Entre na conexão que você fez no workbench;
+9.1.2 - Rode o comando "use crud";
+9.1.3 - Rode o comando "select from \* lanches";
+
+### 9.2 - Verificar se os dados estão sendo atualizados na table pela web:
+
+9.2.1 - Entrar na rota "http://localhost:8000/lanches/ver";
+
+### 10 - Deletar dados da tabela:
+
+10.1 - Entre na rota "http://localhost:8000/lanches/ver";
+10.2 - Clique no botão Excluir;
+10.3 - Se tudo tiver ocorrido com sucesso, vai aparecer a mensagem: "Lanche excluído com sucesso!";
+
+### 11.1 - Verificar se os dados estão sendo deletados da tabela pelo workbench:
+
+11.1.1 - Entre na conexão que você fez no workbench;
+11.1.2 - Rode o comando "use crud";
+11.1.3 - Rode o comando "select from \* lanches";
+
+### 11.2 - Verificar se os dados estão sendo deletados na table pela web:
+
+11.2.1 - Entrar na rota "http://localhost:8000/lanches/ver";
