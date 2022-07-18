@@ -18,15 +18,15 @@ Utilize o comando Git Clone dentro da pasta onde você quer clonar o repositóri
 <br />
 2.3 - Instale o Composer;
 
-### 3 - No meu caso, utilizei o XAMPP para subir o serviço MySql:
+### 3 - No meu caso, utilizei o Docker para subir o serviço MySql:
 
-3.1 - Vá no site "https://www.apachefriends.org/pt_br/index.html";
+3.1 - Vá no site "https://www.docker.com/get-started/";
 <br />
 3.2 - Escolha o sistema operacional que você usa;
 <br />
-3.3 - Instale o XAMPP;
+3.3 - Instale o Docker;
 <br />
-3.4 - Suba o serviço MySQL;
+3.4 - Entre na pasta do projeto e use o comando "docker-compose up -d";
 
 ### 4 - Criar um banco de dados(Eu usei mysql):
 
@@ -46,7 +46,7 @@ Utilize o comando Git Clone dentro da pasta onde você quer clonar o repositóri
 
 5.1 - Abra o terminal dentro da pasta do projeto;
 <br />
-5.2 - Rode o comando php artisan serve;
+5.2 - Rode o comando "php artisan serve";
 
 ## Usar o crud
 
