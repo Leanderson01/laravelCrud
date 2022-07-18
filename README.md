@@ -32,7 +32,7 @@ Utilize o comando Git Clone dentro da pasta onde você quer clonar o repositóri
 <br />
 3.5 - Entre na conexão;
 <br />
-3.6 - Rode o comando "create database crud";
+3.6 - Rode o comando "create database crud;";
 
 ### 4 - Rodar o Artisan Serve:
 
@@ -54,9 +54,9 @@ Utilize o comando Git Clone dentro da pasta onde você quer clonar o repositóri
 
 6.1.1 - Entre na conexão que você fez no workbench;
 <br />
-6.1.2 - Rode o comando "use crud";
+6.1.2 - Rode o comando "use crud;";
 <br />
-6.1.3 - Rode o comando "select from \* lanches";
+6.1.3 - Rode o comando "select from \* lanches;";
 
 ### 6.2 - Verificar se os dados estão sendo inseridos na table pela web:
 
@@ -66,9 +66,9 @@ Utilize o comando Git Clone dentro da pasta onde você quer clonar o repositóri
 
 7.1.1 - Entre na conexão que você fez no workbench;
 <br />
-7.1.2 - Rode o comando "use crud";
+7.1.2 - Rode o comando "use crud;";
 <br />
-7.1.3 - Rode o comando "select from \* lanches";
+7.1.3 - Rode o comando "select from \* lanches;";
 
 ### 7.2 - Verificar tabela com dados na web:
 
@@ -90,9 +90,9 @@ Utilize o comando Git Clone dentro da pasta onde você quer clonar o repositóri
 
 9.1.1 - Entre na conexão que você fez no workbench;
 <br />
-9.1.2 - Rode o comando "use crud";
+9.1.2 - Rode o comando "use crud;";
 <br />
-9.1.3 - Rode o comando "select from \* lanches";
+9.1.3 - Rode o comando "select from \* lanches;";
 
 ### 9.2 - Verificar se os dados estão sendo atualizados na table pela web:
 
@@ -110,9 +110,9 @@ Utilize o comando Git Clone dentro da pasta onde você quer clonar o repositóri
 
 11.1.1 - Entre na conexão que você fez no workbench;
 <br />
-11.1.2 - Rode o comando "use crud";
+11.1.2 - Rode o comando "use crud;";
 <br />
-11.1.3 - Rode o comando "select from \* lanches";
+11.1.3 - Rode o comando "select from \* lanches;";
 
 ### 11.2 - Verificar se os dados estão sendo deletados na table pela web:
 
