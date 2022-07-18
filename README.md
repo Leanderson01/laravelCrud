@@ -10,59 +10,55 @@ O projeto consiste em fazer um CRUD utilizando Laravel, e tem como foco a aprend
 
 Utilize o comando Git Clone dentro da pasta onde você quer clonar o repositório;
 
-### 2 - No meu caso, utilizei o XAMPP para subir o serviço MySql:
+### 2 - Instalar o Composer
 
-2.1 - Vá no site "https://www.apachefriends.org/pt_br/index.html";
+2.1 - Vá no site "https://getcomposer.org/download/";
 <br />
 2.2 - Escolha o sistema operacional que você usa;
 <br />
-2.3 - Instale o XAMPP;
-<br />
-2.4 - Suba o serviço MySQL;
+2.3 - Instale o Composer;
 
-### 3 - Criar um banco de dados(Eu usei mysql):
+### 3 - No meu caso, utilizei o XAMPP para subir o serviço MySql:
 
-3.1 - No meu caso usei o Workbench para criar;
+3.1 - Vá no site "https://www.apachefriends.org/pt_br/index.html";
 <br />
-3.2 - Abra o Workbench e vá em MySQL Connections e clique no ícone "+";
+3.2 - Escolha o sistema operacional que você usa;
 <br />
-3.3 - Digite "crud" no campo Connection Name;
+3.3 - Instale o XAMPP;
 <br />
-3.4 - Deixe por padrão o campo Username como root;
-<br />
-3.5 - Entre na conexão;
-<br />
-3.6 - Rode o comando "create database crud;";
+3.4 - Suba o serviço MySQL;
 
-### 4 - Rodar o Artisan Serve:
+### 4 - Criar um banco de dados(Eu usei mysql):
 
-4.1 - Abra o terminal dentro da pasta do projeto;
+4.1 - No meu caso usei o Workbench para criar;
 <br />
-4.2 - Rode o comando php artisan serve;
+4.2 - Abra o Workbench e vá em MySQL Connections e clique no ícone "+";
+<br />
+4.3 - Digite "crud" no campo Connection Name;
+<br />
+4.4 - Deixe por padrão o campo Username como root;
+<br />
+4.5 - Entre na conexão;
+<br />
+4.6 - Rode o comando "create database crud;";
+
+### 5 - Rodar o Artisan Serve:
+
+5.1 - Abra o terminal dentro da pasta do projeto;
+<br />
+5.2 - Rode o comando php artisan serve;
 
 ## Usar o crud
 
-### 5 - Inserir dados na tabela:
+### 6 - Inserir dados na tabela:
 
-5.1 - Digitar o seguinte link no seu navegador "http://localhost:8000/lanches/novo";
+6.1 - Digitar o seguinte link no seu navegador "http://localhost:8000/lanches/novo";
 <br />
-5.2 - Insira os dados;
+6.2 - Insira os dados;
 <br />
-5.3 - Se tudo estiver correto irá aparecer a mensagem: "Lanche criado com sucesso!";
+6.3 - Se tudo estiver correto irá aparecer a mensagem: "Lanche criado com sucesso!";
 
-### 6.1 - Verificar se os dados estão sendo inseridos na table pelo workbench:
-
-6.1.1 - Entre na conexão que você fez no workbench;
-<br />
-6.1.2 - Rode o comando "use crud;";
-<br />
-6.1.3 - Rode o comando "select from \* lanches;";
-
-### 6.2 - Verificar se os dados estão sendo inseridos na table pela web:
-
-6.2.1 - Entrar na rota "http://localhost:8000/lanches/ver";
-
-### 7.1 - Verificar tabela com dados no workbench:
+### 7.1 - Verificar se os dados estão sendo inseridos na table pelo workbench:
 
 7.1.1 - Entre na conexão que você fez no workbench;
 <br />
@@ -70,50 +66,62 @@ Utilize o comando Git Clone dentro da pasta onde você quer clonar o repositóri
 <br />
 7.1.3 - Rode o comando "select from \* lanches;";
 
-### 7.2 - Verificar tabela com dados na web:
+### 7.2 - Verificar se os dados estão sendo inseridos na table pela web:
 
-7.1.1- Entrar na rota "http://localhost:8000/lanches/ver";
+7.2.1 - Entrar na rota "http://localhost:8000/lanches/ver";
 
-### 8 - Editar dados da tabela:
+### 8.1 - Verificar tabela com dados no workbench:
 
-8.1 - Entrar na rota "http://localhost:8000/lanches/ver";
+8.1.1 - Entre na conexão que você fez no workbench;
 <br />
-8.2 - Escolher o item que você quer editar;
+8.1.2 - Rode o comando "use crud;";
 <br />
-8.3 - Clicar no botão Editar, você redirecionado para página de edição;
+8.1.3 - Rode o comando "select from \* lanches;";
+
+### 8.2 - Verificar tabela com dados na web:
+
+8.1.1- Entrar na rota "http://localhost:8000/lanches/ver";
+
+### 9 - Editar dados da tabela:
+
+9.1 - Entrar na rota "http://localhost:8000/lanches/ver";
 <br />
-8.4 - Escolha o campo que você deseja alterar;
+9.2 - Escolher o item que você quer editar;
 <br />
-8.5 - Clique em salvar, se tudo estiver certo vai aparecer a mensagem: "Lanche atualizado com sucesso!";
-
-### 9.1 - Verificar se os dados estão sendo atualizados na table pelo workbench:
-
-9.1.1 - Entre na conexão que você fez no workbench;
+9.3 - Clicar no botão Editar, você redirecionado para página de edição;
 <br />
-9.1.2 - Rode o comando "use crud;";
+9.4 - Escolha o campo que você deseja alterar;
 <br />
-9.1.3 - Rode o comando "select from \* lanches;";
+9.5 - Clique em salvar, se tudo estiver certo vai aparecer a mensagem: "Lanche atualizado com sucesso!";
 
-### 9.2 - Verificar se os dados estão sendo atualizados na table pela web:
+### 10.1 - Verificar se os dados estão sendo atualizados na table pelo workbench:
 
-9.2.1 - Entrar na rota "http://localhost:8000/lanches/ver";
-
-### 10 - Deletar dados da tabela:
-
-10.1 - Entre na rota "http://localhost:8000/lanches/ver";
+10.1.1 - Entre na conexão que você fez no workbench;
 <br />
-10.2 - Clique no botão Excluir;
+10.1.2 - Rode o comando "use crud;";
 <br />
-10.3 - Se tudo tiver ocorrido com sucesso, vai aparecer a mensagem: "Lanche excluído com sucesso!";
+10.1.3 - Rode o comando "select from \* lanches;";
 
-### 11.1 - Verificar se os dados estão sendo deletados da tabela pelo workbench:
+### 10.2 - Verificar se os dados estão sendo atualizados na table pela web:
 
-11.1.1 - Entre na conexão que você fez no workbench;
+10.2.1 - Entrar na rota "http://localhost:8000/lanches/ver";
+
+### 11 - Deletar dados da tabela:
+
+11.1 - Entre na rota "http://localhost:8000/lanches/ver";
 <br />
-11.1.2 - Rode o comando "use crud;";
+11.2 - Clique no botão Excluir;
 <br />
-11.1.3 - Rode o comando "select from \* lanches;";
+11.3 - Se tudo tiver ocorrido com sucesso, vai aparecer a mensagem: "Lanche excluído com sucesso!";
 
-### 11.2 - Verificar se os dados estão sendo deletados na table pela web:
+### 12.1 - Verificar se os dados estão sendo deletados da tabela pelo workbench:
 
-11.2.1 - Entrar na rota "http://localhost:8000/lanches/ver";
+12.1.1 - Entre na conexão que você fez no workbench;
+<br />
+12.1.2 - Rode o comando "use crud;";
+<br />
+12.1.3 - Rode o comando "select from \* lanches;";
+
+### 12.2 - Verificar se os dados estão sendo deletados na table pela web:
+
+12.2.1 - Entrar na rota "http://localhost:8000/lanches/ver";
