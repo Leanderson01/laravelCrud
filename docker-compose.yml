@@ -1,0 +1,44 @@
+version: '2'
+
+volumes:
+  crud-mysql-data:
+    driver: local
+
+  crud-redis-data:
+    driver: local
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: crud
+    volumes:
+      - crud-mysql-data:/var/lib/mysql
+    ports:
+      - '3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_DATABASE=crud
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=
+
+  cache:
+    image: redis:4.0
+    container_name: crud-redis
+    command: --appendonly yes
+    volumes:
+      - crud-redis-data:/data
+    ports:
+      - '6380:6379'
+
+  app:
+    image: ambientum/php:8.1-nginx
+    container_name: crud-app
+    volumes:
+      - .:/var/www/app
+    ports:
+      - '8000:8000'
+    environment:
+      XDEBUG_ENABLED: 'true'
+    links:
+      - mysql
+      - cache
