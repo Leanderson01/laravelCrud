@@ -10,13 +10,13 @@ volumes:
 services:
   mysql:
     image: mysql:5.7
-    container_name: crud
+    container_name: crud-mysql
     volumes:
       - crud-mysql-data:/var/lib/mysql
     ports:
-      - '3306'
+      - '3306:3306'
     environment:
-      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ROOT_PASSWORD=crud
       - MYSQL_DATABASE=crud
       - MYSQL_USER=root
       - MYSQL_PASSWORD=

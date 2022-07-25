@@ -17,9 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('lanches/novo', 'App\Http\Controllers\LanchesController@create');
+Route::get('lanches/novo', 'App\Http\Controllers\LanchesController@create')->name('criar_lanche');
 Route::post('lanches/novo', 'App\Http\Controllers\LanchesController@store')->name('salvar_lanche');
-Route::get('lanches/ver', 'App\Http\Controllers\LanchesController@show');
+Route::get('lanches/ver', 'App\Http\Controllers\LanchesController@index');
+Route::get('lanches/ver/{id}', 'App\Http\Controllers\LanchesController@show');
 Route::get('lanches/delete/{id}', 'App\Http\Controllers\LanchesController@destroy')->name('deletar_lanche');
 Route::get('lanches/edit/{id}', 'App\Http\Controllers\LanchesController@edit')->name('editar_lanche');
 Route::post('lanches/edit/{id}', 'App\Http\Controllers\LanchesController@update')->name('atualizar_lanche');
