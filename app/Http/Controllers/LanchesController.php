@@ -36,7 +36,7 @@ class LanchesController extends Controller
     {
         $lanche = Lanche::findOrFail($id);
 
-        return view('lanches.edit', ['lanche' => $lanche]);
+        return view('lanches.edit', compact('lanche'));
     }
 
     public function update(Request $request, $id)
