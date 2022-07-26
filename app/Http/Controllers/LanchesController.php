@@ -28,7 +28,8 @@ class LanchesController extends Controller
 
     public function show($id)
     {
-        $lanche = Lanche::find($id);
+        $lanche = Lanche::findOrFail($id);
+
         return view('lanches.show', compact('lanche'));
     }
 
